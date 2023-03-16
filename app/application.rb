@@ -8,7 +8,8 @@ require 'dotenv'
 require 'yaml'
 require 'erb'
 
-# require 'app/models/student'
+require 'app/models/student'
+require 'app/models/post'
 
 require 'app/runner'
 
@@ -20,6 +21,14 @@ def db_configuration
 
   YAML.safe_load(db_configuration_result, aliases: true)
 end
+
+
+
+ActiveRecord::Base.logger = ActiveSupport::Logger.new("log/#{ENV['ENVIRONMENT']}.log")
+
+# To disable the ANSI color output:
+ActiveSupport::LogSubscriber.colorize_logging = false
+
 
 ActiveRecord::Base.establish_connection(db_configuration[ENV['ENVIRONMENT']])
 

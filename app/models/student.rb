@@ -1,3 +1,3 @@
-class Student < ActiveRecord::Base
-    self.table_name = 'Student'
+class Student  < ActiveRecord::Base
+    self.table_name = 'students'
 end

@@ -1,0 +1,4 @@
+# Logfile created on 2023-03-17 00:42:44 +0800 by logger.rb/v1.4.2
+   (2.6ms)  SET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483
+  Student Load (2.6ms)  SELECT `students`.* FROM `students`
+  Post Load (3.7ms)  SELECT `posts`.* FROM `posts`
