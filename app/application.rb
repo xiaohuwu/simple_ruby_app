@@ -2,13 +2,13 @@
 
 ENV['ENVIRONMENT'] ||= 'development'
 
-require 'pg'
+require 'mysql2'
 require 'active_record'
 require 'dotenv'
 require 'yaml'
 require 'erb'
 
-require 'app/models/post'
+# require 'app/models/student'
 
 require 'app/runner'
 

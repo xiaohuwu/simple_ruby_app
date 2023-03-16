@@ -1,12 +1,12 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch('MAX_THREADS') { 5 } %>
-  database: <%= ENV.fetch('DATABASE_NAME') %>
-  username: <%= ENV.fetch('DATABASE_USER') %>
-  password: <%= ENV.fetch('DATABASE_PASSWORD') %>
-  host: <%= ENV.fetch('DATABASE_HOST') %>
-  port: <%= ENV.fetch('DATABASE_PORT') %>
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: my_app
+  username: root
+  password: 12345678
+  host: 127.0.0.1
+  port: 3306
 
 development:
   <<: *default
